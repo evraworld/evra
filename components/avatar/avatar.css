@@ -1,0 +1,27 @@
+/* Motion for components/avatar/EvraAvatar.tsx. Each animated group draws around its own 0,0, so the SVG default
+   transform-origin of 0 0 is the pivot: the feet for breathing, the centre for eyes and sparkles. */
+.eva--full .eva-breathe { animation: eva-breathe 3.8s ease-in-out infinite; }
+.eva--full .eva-shadow { animation: eva-shadow 3.8s ease-in-out infinite; }
+.eva-pop { animation: eva-pop 260ms cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.eva-twinkle { animation: eva-twinkle 1.6s ease-in-out infinite both; }
+.eva-dot { animation: eva-dot 1.2s ease-in-out infinite both; }
+.eva-zz { animation: eva-zz 2.1s ease-in infinite both; }
+.eva--none * { animation: none !important; }
+
+@keyframes eva-breathe { 50% { transform: scale(0.985, 1.025); } }
+@keyframes eva-shadow { 50% { transform: scale(0.95, 0.9); } }
+@keyframes eva-pop { from { transform: scale(0.4); } }
+@keyframes eva-twinkle {
+  0%, 100% { transform: scale(0.6) rotate(0deg); opacity: 0.5; }
+  50% { transform: scale(1.15) rotate(20deg); opacity: 1; }
+}
+@keyframes eva-dot { 0%, 100% { opacity: 0.25; } 40% { opacity: 1; } }
+@keyframes eva-zz {
+  from { opacity: 0; transform: translate(0, 6px); }
+  30% { opacity: 1; }
+  to { opacity: 0; transform: translate(10px, -22px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eva * { animation: none !important; }
+}
