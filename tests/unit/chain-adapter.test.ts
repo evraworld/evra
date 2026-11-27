@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { ChainAdapter } from "@/lib/chain";
+import { getChain, type ChainAdapter } from "@/lib/chain";
 import { simulatedChain } from "@/lib/chain/simulated";
 
 const G = "GA7QYNF7SOWQ3GLR2BGMZEHXAVIRZA4KVWLTJJFC7MGXUA74P7UJVSGZ";
@@ -48,6 +48,11 @@ describe("simulated adapter", () => {
       return [await chain.fundTestAccount(G), await chain.fundTestAccount(C)];
     };
     expect(await run()).toEqual(await run());
+  });
+
+  it("is the one adapter the app gets", async () => {
+    expect(await getChain()).toBe(await getChain());
+    expect((await getChain()).network).toBe("testnet");
   });
 
   it("reports a G address as a wallet account", async () => {
