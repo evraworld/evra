@@ -21,3 +21,12 @@ export interface ChainAdapter {
   /** Testnet only: Friendbot XLM plus test USDC. */
   fundTestAccount(address: string): Promise<TxRef>;
 }
+
+// One adapter per process, cached on globalThis like the database so dev hot reloads keep its state.
+// shortcut: always the simulated adapter; pick by env once the Stellar testnet adapter exists.
+const g = globalThis as unknown as { __evraChain?: ChainAdapter };
+
+export async function getChain(): Promise<ChainAdapter> {
+  if (!g.__evraChain) g.__evraChain = (await import("./simulated")).simulatedChain();
+  return g.__evraChain;
+}
