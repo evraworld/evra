@@ -2,7 +2,7 @@ import { strings } from "./strings";
 
 export const core = strings({
   en: {
-    nav: { home: "Home", work: "Find work", deals: "Deals", money: "Money", me: "Me", creators: "Creators", brand: "Brand", ops: "Ops", main: "Main" },
+    nav: { home: "Home", work: "Find work", deals: "Deals", me: "Me", creators: "Creators", brand: "Brand", ops: "Ops", main: "Main" },
     prefs: { language: "Language", text: "Text size", textMd: "A", textLg: "A+", textXl: "A++", signOut: "Sign out" },
     common: { save: "Save", saved: "Saved", cancel: "Cancel", back: "Back", next: "Continue", done: "Done", edit: "Edit", delete: "Delete", optional: "optional", seeAll: "See all", loading: "Loading…", demoData: "Demo data" },
     signin: {
@@ -26,7 +26,7 @@ export const core = strings({
     },
   },
   ar: {
-    nav: { home: "الرئيسية", work: "ابحث عن عمل", deals: "الصفقات", money: "المال", me: "حسابي", creators: "صنّاع المحتوى", brand: "العلامة", ops: "العمليات", main: "القائمة" },
+    nav: { home: "الرئيسية", work: "ابحث عن عمل", deals: "الصفقات", me: "حسابي", creators: "صنّاع المحتوى", brand: "العلامة", ops: "العمليات", main: "القائمة" },
     prefs: { language: "اللغة", text: "حجم الخط", signOut: "تسجيل الخروج" },
     common: { save: "حفظ", saved: "تم الحفظ", cancel: "إلغاء", back: "رجوع", next: "متابعة", done: "تم", edit: "تعديل", delete: "حذف", optional: "اختياري", seeAll: "عرض الكل", loading: "جارٍ التحميل…", demoData: "بيانات تجريبية" },
     signin: {
@@ -50,7 +50,7 @@ export const core = strings({
     },
   },
   hi: {
-    nav: { home: "होम", work: "काम खोजें", deals: "डील्स", money: "पैसे", me: "मैं", creators: "क्रिएटर्स", brand: "ब्रांड", ops: "ऑप्स", main: "मेन्यू" },
+    nav: { home: "होम", work: "काम खोजें", deals: "डील्स", me: "मैं", creators: "क्रिएटर्स", brand: "ब्रांड", ops: "ऑप्स", main: "मेन्यू" },
     prefs: { language: "भाषा", text: "अक्षर का आकार", signOut: "साइन आउट" },
     common: { save: "सेव करें", saved: "सेव हो गया", cancel: "रद्द करें", back: "वापस", next: "आगे बढ़ें", done: "हो गया", edit: "बदलें", delete: "हटाएँ", optional: "वैकल्पिक", seeAll: "सब देखें", loading: "लोड हो रहा है…", demoData: "डेमो डेटा" },
     signin: {
